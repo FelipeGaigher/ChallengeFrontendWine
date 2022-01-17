@@ -1,7 +1,6 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { FaMagento } from 'react-icons/fa';
-
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { FaMagento } from "react-icons/fa";
 
 export const Container = styled.div`
   grid-area: header;
@@ -11,12 +10,11 @@ export const Container = styled.div`
   align-items: center;
   height: 84px;
   width: 100%;
-/* gray / silver */
+  /* gray / silver */
 
-  border-bottom: 3px solid #CCCCCC;
+  border-bottom: 3px solid #cccccc;
   box-sizing: border-box;
 `;
-
 
 //MOBILEICON
 export const NavIcon = styled(FaMagento)`
@@ -28,25 +26,23 @@ export const MobileIcon = styled.div`
   @media screen and (max-width: 1100px) {
     display: block;
     position: absolute;
-    top: 1.50rem;
+    top: 1.5rem;
     right: 1.25rem;
     transform: translate (-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-}
+  }
 `;
 
 //LOGO
 export const NavStart = styled.div`
   display: flex;
   margin-left: 3rem;
-
 `;
 export const NavLogo = styled(Link)`
   /* background: #fff; */
   align-items: left;
 `;
-
 
 //ITENS
 export const NavMiddle = styled.div`
@@ -58,33 +54,25 @@ export const NavMiddle = styled.div`
 export const NavMenu = styled.div`
   /* background: #fff; */
   margin: 1rem;
-  
 `;
-
 
 //BUTTONS ICONS
 export const NavEnd = styled.div`
   display: flex;
-  margin-right: 10rem;
-
+  margin-right: 5rem;
 `;
 export const NavIcons = styled.div`
   margin: 0.5rem;
-
 `;
-
 
 export const NavItem = styled.div`
   height: 80px;
   border-bottom: 2px solid transparent;
-
   &:hover {
-    border-bottom: 2px solid #D14B8F;
+    border-bottom: 2px solid #d14b8f;
   }
-
   @media screen and (max-width: 960px) {
     width: 100%;
-
     &:hover {
       border: none;
     }
@@ -96,12 +84,12 @@ export const Mobileicon = styled.div`
   @media screen and (max-width: 1100px) {
     display: block;
     position: absolute;
-    top: 1.50rem;
+    top: 1.5rem;
     right: 1.25rem;
     transform: translate (-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-}
+  }
 `;
 
 export const NavLinks = styled(Link)`
@@ -123,5 +111,4 @@ export const NavLinks = styled(Link)`
       transition: all 0.3s ease;
     }
   }
-
 `;

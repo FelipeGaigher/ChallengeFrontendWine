@@ -2,16 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ListItem } from "../../types/ListItem";
 
-import { 
-  Container, 
-  Card, 
+import {
+  Container,
+  Card,
   ItemFilter,
   CardsBox,
   ItemProduct,
-  ButtonAdd
+  ButtonAdd,
+  TextBox,
+  GroupDiscount,
+  PriceGroup,
+  DiscountGroup
   // Button
   // CardButton
-   } from "./styles";
+} from "./styles";
 
 const Content = () => {
   const [posts, setPosts] = useState<ListItem[]>([]);
@@ -28,14 +32,36 @@ const Content = () => {
   return (
     <>
       <Container>
-        <ItemFilter >
+        <ItemFilter>
           <p>49 produtos encontrados</p>
-        </ItemFilter >
+        </ItemFilter>
 
         <CardsBox>
-          <Card/>
-          <Card />
-          <Card />
+          <Card>
+            <ItemProduct>IMG</ItemProduct>
+            <TextBox>
+              Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+            </TextBox>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
+          </Card>
+          <Card>
+            <ItemProduct>IMG</ItemProduct>
+            <TextBox>
+              Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+            </TextBox>
+            <GroupDiscount>
+              <PriceGroup></PriceGroup>
+              <DiscountGroup></DiscountGroup>
+            </GroupDiscount>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
+          </Card>
+          <Card>
+            <ItemProduct>IMG</ItemProduct>
+            <TextBox>
+              Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+            </TextBox>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
+          </Card>
         </CardsBox>
 
         <CardsBox>
@@ -62,7 +88,6 @@ const Content = () => {
 
           {posts.length >= 0 && <p>Ainda nao existem posts</p>}
         </div>
-
       </Container>
     </>
   );

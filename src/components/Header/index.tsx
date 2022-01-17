@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import Logo from '../../images/logo/black.svg';
 
-import WineBox from '../../images/Winebox/vazio.svg';
-
-import Search from '../../images/pesquisa1/Busca.svg';
-import Profile from '../../images/profile/conta.svg';
-
-import { FaBars, FaTimes } from 'react-icons/fa';
+import Logo from "../../images/logo/black.svg";
+import WineBox from "../../images/Winebox/vazio.svg";
+import Search from "../../images/pesquisa1/Busca.svg";
+import Profile from "../../images/profile/conta.svg";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import {
   Container,
@@ -18,9 +16,8 @@ import {
   NavStart,
   NavMiddle,
   NavEnd,
-  Mobileicon
+  Mobileicon,
 } from "./styles";
-
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -29,72 +26,83 @@ const Navbar = () => {
 
   return (
     <>
-    <Container>
+      <Container>
+        <NavStart>
+          <NavLogo to="/">
+            <img src={Logo} alt="Wine" />
+          </NavLogo>
+        </NavStart>
+        <Mobileicon onClick={handleClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </Mobileicon>
 
-      <NavStart>
-        <NavLogo to="/">
-          <img src={Logo} alt="Wine" />
-        </NavLogo>
-      </NavStart>
-      <Mobileicon onClick={handleClick}>{click ? <FaTimes /> : <FaBars />}</Mobileicon>
+        <NavMiddle>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="/Clube">
+                <p>Clube</p>{" "}
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
 
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="/Loja">
+                {" "}
+                <p>Loja</p>{" "}
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
 
-      <NavMiddle>
-        <NavMenu>
-          <NavItem>
-            <NavLinks to='/Clube'>Clube</NavLinks>
-          </NavItem>
-        </NavMenu>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="/Produtores">
+                {" "}
+                <p> Produtores</p>
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
 
-        <NavMenu>
-          <NavItem>
-            <NavLinks to='/Loja'>Loja</NavLinks>
-          </NavItem>
-        </NavMenu>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="/Ofertas">
+                {" "}
+                <p> Ofertas</p>
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
 
-        <NavMenu>
-          <NavItem>
-            <NavLinks to='/Produtores'>Produtores</NavLinks>
-          </NavItem>
-        </NavMenu>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="/Eventos">
+                {" "}
+                <p> Eventos</p>
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
+        </NavMiddle>
 
-        <NavMenu>
-          <NavItem>
-            <NavLinks to='/Ofertas'>Ofertas</NavLinks>
-          </NavItem>
-        </NavMenu>
+        <NavEnd>
+          <NavIcons>
+            <NavLinks to="/Search">
+              <img src={Search} alt="Search" />
+            </NavLinks>
+          </NavIcons>
 
-        <NavMenu>
-          <NavItem>
-            <NavLinks to='/Eventos'>Eventos</NavLinks>
-          </NavItem>
-        </NavMenu>
+          <NavIcons>
+            <NavLinks to="/Profile">
+              <img src={Profile} alt="Profile" />
+            </NavLinks>
+          </NavIcons>
 
-      </NavMiddle>  
-  
-      <NavEnd>
-        <NavIcons>
-          <NavLinks to="/Search">
-            <img src={Search} alt="Search" />
-          </NavLinks>
-        </NavIcons>
-
-        <NavIcons>
-          <NavLinks to="/Profile">
-            <img src={Profile} alt="Profile" />
-          </NavLinks>
-        </NavIcons>
-
-        <NavIcons>
-          <NavLinks to="/WineBox">
-            <img src={WineBox} alt="Winebox" />
-          </NavLinks>
-        </NavIcons>
-        
-      </NavEnd>
-
-    </Container>
-  </>
+          <NavIcons>
+            <NavLinks to="/WineBox">
+              <img src={WineBox} alt="Winebox" />
+            </NavLinks>
+          </NavIcons>
+        </NavEnd>
+      </Container>
+    </>
   );
 };
 
