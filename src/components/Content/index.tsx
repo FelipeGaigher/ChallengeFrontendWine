@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { ListItem } from "../../types/ListItem";
+import imgVinho from "../../images/imgVinho/IMG Produto.svg";
 
 import {
   Container,
@@ -13,22 +14,29 @@ import {
   GroupDiscount,
   PriceGroup,
   DiscountGroup,
+  GroupPartners,
+  TextPartners,
+  PricePartners,
+  FontSize,
+  NotPartners,
+  TextNotPartners,
   NavLinks,
+  
   // Button
   // CardButton
 } from "./styles";
 
 const Content = () => {
-  const [posts, setPosts] = useState<ListItem[]>([]);
+  // const [posts, setPosts] = useState<ListItem[]>([]);
 
-  //component did mount
-  useEffect(() => {
-    setTimeout(() => {
-      fetch("https://wine-back-test.herokuapp.com/products?page=1&limit=10")
-        .then((response) => response.json())
-        .then((response) => setPosts(response));
-    }, 3000);
-  });
+  // //component did mount
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     fetch("https://wine-back-test.herokuapp.com/products?page=1&limit=10")
+  //       .then((response) => response.json())
+  //       .then((response) => setPosts(response));
+  //   }, 3000);
+  // });
 
   return (
     <>
@@ -39,73 +47,264 @@ const Content = () => {
 
         <CardsBox>
           <Card>
+
             <NavLinks to="/card1">
-              <ItemProduct>IMG</ItemProduct>
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>
             </NavLinks>
 
             <NavLinks to="/card1">
               <TextBox>
-                Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
               </TextBox>
             </NavLinks>
-           
+
             <GroupDiscount>
               <PriceGroup>R$ 37,40</PriceGroup>
               <DiscountGroup>60% OFF</DiscountGroup>
             </GroupDiscount>
 
-            <ButtonAdd>ADICIONAR</ButtonAdd>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
+
+
           </Card>
+          <ButtonAdd>ADICIONAR</ButtonAdd>
 
           <Card>
             <NavLinks to="/card2">
-              <ItemProduct>IMG</ItemProduct>
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>{" "}
             </NavLinks>
-
             <NavLinks to="/card2">
               <TextBox>
-                Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
               </TextBox>
             </NavLinks>
-
+            
             <GroupDiscount>
               <PriceGroup>R$ 37,40</PriceGroup>
               <DiscountGroup>60% OFF</DiscountGroup>
             </GroupDiscount>
-            <ButtonAdd>ADICIONAR</ButtonAdd>
+
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
           </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
 
           <Card>
             <NavLinks to="/card3">
-              <ItemProduct>IMG</ItemProduct>
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>{" "}
             </NavLinks>
-
             <NavLinks to="/card3">
               <TextBox>
-                Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
               </TextBox>
             </NavLinks>
-
             <GroupDiscount>
               <PriceGroup>R$ 37,40</PriceGroup>
               <DiscountGroup>60% OFF</DiscountGroup>
             </GroupDiscount>
-            <ButtonAdd>ADICIONAR</ButtonAdd>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
           </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
         </CardsBox>
 
         <CardsBox>
-          <Card />
-          <Card />
-          <Card />
+          <Card>
+            <NavLinks to="/card4">
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>
+            </NavLinks>
+            <NavLinks to="/card4">
+              <TextBox>
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              </TextBox>
+            </NavLinks>
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
+          </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
+
+          <Card>
+            <NavLinks to="/card5">
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>{" "}
+            </NavLinks>
+            <NavLinks to="/card5">
+              <TextBox>
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              </TextBox>
+            </NavLinks>
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
+          </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
+
+          <Card>
+            <NavLinks to="/card6">
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>{" "}
+            </NavLinks>
+            <NavLinks to="/card6">
+              <TextBox>
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              </TextBox>
+            </NavLinks>
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
+          </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
         </CardsBox>
 
         <CardsBox>
-          <Card />
-          <Card />
-          <Card />
+          <Card>
+            <NavLinks to="/card7">
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>
+            </NavLinks>
+            <NavLinks to="/card7">
+              <TextBox>
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              </TextBox>
+            </NavLinks>
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
+          </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
+
+          <Card>
+            <NavLinks to="/card8">
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>{" "}
+            </NavLinks>
+            <NavLinks to="/card8">
+              <TextBox>
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              </TextBox>
+            </NavLinks>
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
+          </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
+
+          <Card>
+            <NavLinks to="/card9">
+              <ItemProduct>
+                <img src={imgVinho} alt="" />
+              </ItemProduct>{" "}
+            </NavLinks>
+            <NavLinks to="/card9">
+              <TextBox>
+                Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              </TextBox>
+            </NavLinks>
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
+            <GroupPartners>
+              <TextPartners>Sócio Wine</TextPartners>
+              <PricePartners>R$ <FontSize>30,</FontSize>00</PricePartners>
+            </GroupPartners>
+            <NotPartners>
+              <TextNotPartners>
+                <p>NÃO SÓCIO R$ 37,40</p>
+              </TextNotPartners>
+            </NotPartners>
+          </Card>
+            <ButtonAdd>ADICIONAR</ButtonAdd>
         </CardsBox>
-        <div className="App">
+        {/* <div className="App">
           {posts.length > 0 &&
             posts.map((post) => {
               return (
@@ -117,7 +316,7 @@ const Content = () => {
             })}
 
           {posts.length >= 0 && <p>Ainda nao existem posts</p>}
-        </div>
+        </div> */}
       </Container>
     </>
   );

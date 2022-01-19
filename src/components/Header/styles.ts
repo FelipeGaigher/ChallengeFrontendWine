@@ -54,15 +54,6 @@ export const NavMiddle = styled.div`
   text-align: center;
 `;
 
-//BUTTONS ICONS
-export const NavEnd = styled.div`
-  display: flex;
-  margin-right: 5rem;
-`;
-export const NavIcons = styled.div`
-  margin: 0.5rem;
-`;
-
 export const NavItem = styled.div`
   margin: 1rem;
   height: 80px;
@@ -77,6 +68,18 @@ export const NavItem = styled.div`
     }
   }
 `;
+
+
+//BUTTONS ICONS
+export const NavEnd = styled.div`
+  display: flex;
+  margin-right: 5rem;
+`;
+export const NavIcons = styled.div`
+  margin: 0.5rem;
+`;
+
+
 
 
 export const NavLinks = styled(Link)`

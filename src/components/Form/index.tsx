@@ -14,7 +14,9 @@ const Form = () => {
   return (
     <>
       <Container>
-        <TitleForm>Refine sua busca</TitleForm>
+        <TitleForm>
+          <p>Refine sua busca</p> 
+        </TitleForm>
 
         <BoxForm>
           <SubTitleForm>Por preço</SubTitleForm>
@@ -25,7 +27,7 @@ const Form = () => {
             </NavLinks>
 
             <TextCheckBox>
-              <label>Acima de R$500</label>
+              <label>Até R$40</label>
             </TextCheckBox>
           </CheckBox>
 
@@ -35,7 +37,7 @@ const Form = () => {
             </NavLinks>
 
             <TextCheckBox>
-              <label>Acima de R$500</label>
+              <label>R$40 A R$60</label>
             </TextCheckBox>
           </CheckBox>
 
@@ -45,7 +47,7 @@ const Form = () => {
             </NavLinks>
 
             <TextCheckBox>
-              <label>Acima de R$500</label>
+              <label>R$100 A R$200</label>
             </TextCheckBox>
           </CheckBox>
 
@@ -55,7 +57,7 @@ const Form = () => {
             </NavLinks>
 
             <TextCheckBox>
-              <label>Acima de R$500</label>
+              <label>R$200 A R$500</label>
             </TextCheckBox>
           </CheckBox>
 

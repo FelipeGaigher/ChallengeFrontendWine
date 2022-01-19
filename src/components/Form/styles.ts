@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
   grid-area: form;
   background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 84px; */
+  height: 100vh;
+  width: 100%;
 `;
 
 export const TitleForm = styled.div`
@@ -19,12 +25,16 @@ export const TitleForm = styled.div`
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+    align-items: right;
+
 `;
 
 
 export const BoxForm = styled.div`
-    margin-left: 10rem;
-      flex-direction: row;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+
 
 `;
 export const SubTitleForm = styled.div`
