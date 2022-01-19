@@ -6,12 +6,12 @@ import Content from '../Content';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "../../pages/Home";
-import Clube from "../../pages/Clube";
-import Loja from "../../pages/Loja";
-import Produtores from "../../pages/Produtores";
-import Eventos from "../../pages/Eventos";
-import Ofertas from "../../pages/Ofertas";
+import Home from "../../pages/home";
+import Clube from "../../pages/clube";
+import Loja from "../../pages/loja";
+import Produtores from "../../pages/produtores";
+import Eventos from "../../pages/eventos";
+import Ofertas from "../../pages/ofertas";
 
 
 const Layout = () => {

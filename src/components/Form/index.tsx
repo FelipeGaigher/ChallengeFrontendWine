@@ -1,74 +1,77 @@
-import React from 'react';
-import { 
+import React from "react";
+
+import {
   Container,
   TitleForm,
   BoxForm,
   SubTitleForm,
   CheckBox,
-  TextCheckBox
-
-   } from "./styles";
+  TextCheckBox,
+  NavLinks,
+} from "./styles";
 
 const Form = () => {
   return (
     <>
       <Container>
-      
-        <TitleForm>
-          Refine sua busca
-        </TitleForm>
+        <TitleForm>Refine sua busca</TitleForm>
 
         <BoxForm>
-
-          <SubTitleForm>
-            Por preço          
-          </SubTitleForm>
+          <SubTitleForm>Por preço</SubTitleForm>
 
           <CheckBox>
-            <input type="radio" />
-          <TextCheckBox>
-            <label>Até R$40</label>
-            <br />
-          </TextCheckBox>
-        </CheckBox>
-        
-        <CheckBox>
-          <input type="radio" />
-          <TextCheckBox>
-            <label>R$40 A R$60</label>
-            <br />
-          </TextCheckBox>
-        </CheckBox>
+            <NavLinks to="opcao1">
+              <input type="radio" />
+            </NavLinks>
 
-        <CheckBox>
-          <input type="radio" />
-          <TextCheckBox>
-            <label>R$100 A R$200</label>
-            <br />
-          </TextCheckBox>
-        </CheckBox>
+            <TextCheckBox>
+              <label>Acima de R$500</label>
+            </TextCheckBox>
+          </CheckBox>
 
-        <CheckBox>
-          <input type="radio" />
-          <TextCheckBox>
-            <label>R$200 A R$500</label>
-            <br />
-          </TextCheckBox>
-        </CheckBox>
+          <CheckBox>
+            <NavLinks to="opcao2">
+              <input type="radio" />
+            </NavLinks>
 
-        <CheckBox>
-          <input type="radio" />
-          <TextCheckBox>
-            <label>Acima de R$500</label>
-            <br />
-          </TextCheckBox>
-        </CheckBox>
+            <TextCheckBox>
+              <label>Acima de R$500</label>
+            </TextCheckBox>
+          </CheckBox>
 
+          <CheckBox>
+            <NavLinks to="opcao3">
+              <input type="radio" />
+            </NavLinks>
+
+            <TextCheckBox>
+              <label>Acima de R$500</label>
+            </TextCheckBox>
+          </CheckBox>
+
+          <CheckBox>
+            <NavLinks to="opcao4">
+              <input type="radio" />
+            </NavLinks>
+
+            <TextCheckBox>
+              <label>Acima de R$500</label>
+            </TextCheckBox>
+          </CheckBox>
+
+          <CheckBox>
+            <NavLinks to="opcao5">
+              <input type="radio" />
+            </NavLinks>
+
+            <TextCheckBox>
+              <label>Acima de R$500</label>
+            </TextCheckBox>
+          </CheckBox>
         </BoxForm>
-
       </Container>
     </>
   );
-}
+};
 
-export default Form ;
+export default Form;

@@ -9,14 +9,13 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import {
   Container,
   NavLogo,
-  NavMenu,
   NavIcons,
   NavItem,
   NavLinks,
-  NavStart,
+  // NavStart,
   NavMiddle,
   NavEnd,
-  Mobileicon,
+  MobileIcon,
 } from "./styles";
 
 const Navbar = () => {
@@ -27,59 +26,50 @@ const Navbar = () => {
   return (
     <>
       <Container>
-        <NavStart>
+        {/* <NavStart> */}
           <NavLogo to="/">
             <img src={Logo} alt="Wine" />
           </NavLogo>
-        </NavStart>
-        <Mobileicon onClick={handleClick}>
+        {/* </NavStart> */}
+
+        <MobileIcon onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}
-        </Mobileicon>
+        </MobileIcon>
 
         <NavMiddle>
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="/Clube">
-                <p>Clube</p>{" "}
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
+          <NavItem>
+            <NavLinks to="/Clube">
+              <p>Clube</p>{" "}
+            </NavLinks>
+          </NavItem>
 
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="/Loja">
-                {" "}
-                <p>Loja</p>{" "}
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
+          <NavItem>
+            <NavLinks to="/Loja">
+              {" "}
+              <p>Loja</p>{" "}
+            </NavLinks>
+          </NavItem>
 
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="/Produtores">
-                {" "}
-                <p> Produtores</p>
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
+          <NavItem>
+            <NavLinks to="/Produtores">
+              {" "}
+              <p> Produtores</p>
+            </NavLinks>
+          </NavItem>
 
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="/Ofertas">
-                {" "}
-                <p> Ofertas</p>
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
+          <NavItem>
+            <NavLinks to="/Ofertas">
+              {" "}
+              <p> Ofertas</p>
+            </NavLinks>
+          </NavItem>
 
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="/Eventos">
-                {" "}
-                <p> Eventos</p>
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
+          <NavItem>
+            <NavLinks to="/Eventos">
+              {" "}
+              <p> Eventos</p>
+            </NavLinks>
+          </NavItem>
         </NavMiddle>
 
         <NavEnd>

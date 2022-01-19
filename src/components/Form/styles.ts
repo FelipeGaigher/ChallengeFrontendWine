@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+
 
 export const Container = styled.div`
   grid-area: form;
@@ -22,6 +24,8 @@ export const TitleForm = styled.div`
 
 export const BoxForm = styled.div`
     margin-left: 10rem;
+      flex-direction: row;
+
 `;
 export const SubTitleForm = styled.div`
   padding: 2rem 0 1rem ;
@@ -43,11 +47,38 @@ export const SubTitleForm = styled.div`
 
 export const CheckBox = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 1.25rem;
+
+  @media screen and (max-height: 600px) {
+    height: 70%;
+
+  }
+
 `;
 export const TextCheckBox = styled.div`
-  margin-left: 0.8125rem;
+
 `;
 
+export const NavLinks = styled(Link)`
+  color: #000;
+  display: flex;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  cursor: pointer;
 
+
+  @media screen and (max-height: 500px) {
+    text-align: center;
+    height: 100%;
+    display: flex;
+
+    &:hover {
+      transition: all 0.3s linear
+      ;
+    }
+  }
+`;
 

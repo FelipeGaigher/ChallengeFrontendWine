@@ -12,7 +12,8 @@ import {
   TextBox,
   GroupDiscount,
   PriceGroup,
-  DiscountGroup
+  DiscountGroup,
+  NavLinks,
   // Button
   // CardButton
 } from "./styles";
@@ -38,28 +39,57 @@ const Content = () => {
 
         <CardsBox>
           <Card>
-            <ItemProduct>IMG</ItemProduct>
-            <TextBox>
-              Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
-            </TextBox>
+            <NavLinks to="/card1">
+              <ItemProduct>IMG</ItemProduct>
+            </NavLinks>
+
+            <NavLinks to="/card1">
+              <TextBox>
+                Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+              </TextBox>
+            </NavLinks>
+           
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
+
             <ButtonAdd>ADICIONAR</ButtonAdd>
           </Card>
+
           <Card>
-            <ItemProduct>IMG</ItemProduct>
-            <TextBox>
-              Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
-            </TextBox>
+            <NavLinks to="/card2">
+              <ItemProduct>IMG</ItemProduct>
+            </NavLinks>
+
+            <NavLinks to="/card2">
+              <TextBox>
+                Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+              </TextBox>
+            </NavLinks>
+
             <GroupDiscount>
-              <PriceGroup></PriceGroup>
-              <DiscountGroup></DiscountGroup>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
             </GroupDiscount>
             <ButtonAdd>ADICIONAR</ButtonAdd>
           </Card>
+
           <Card>
-            <ItemProduct>IMG</ItemProduct>
-            <TextBox>
-              Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
-            </TextBox>
+            <NavLinks to="/card3">
+              <ItemProduct>IMG</ItemProduct>
+            </NavLinks>
+
+            <NavLinks to="/card3">
+              <TextBox>
+                Pérez Cruz Limited Edition D.O. Valle del Maipo Andes Syrah 2019
+              </TextBox>
+            </NavLinks>
+
+            <GroupDiscount>
+              <PriceGroup>R$ 37,40</PriceGroup>
+              <DiscountGroup>60% OFF</DiscountGroup>
+            </GroupDiscount>
             <ButtonAdd>ADICIONAR</ButtonAdd>
           </Card>
         </CardsBox>
