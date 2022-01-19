@@ -298,7 +298,7 @@ const Content = () => {
             </GroupPartners>
             <NotPartners>
               <TextNotPartners>
-                <p>NÃO SÓCIO R$ 37,40</p>
+                <p>NÃO SÓCIO R$ 37,40</p> 
               </TextNotPartners>
             </NotPartners>
           </Card>
