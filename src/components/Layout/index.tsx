@@ -1,8 +1,8 @@
-import React from 'react';
-import { Grid } from './styles';
-import Header from '../Header';
-import Form from '../Form';
-import Content from '../Content';
+import React from "react";
+import { Grid } from "./styles";
+import Header from "../Header";
+import Form from "../Form";
+import Content from "../Content";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,31 +13,26 @@ import Produtores from "../../pages/produtores";
 import Eventos from "../../pages/eventos";
 import Ofertas from "../../pages/ofertas";
 
-
 const Layout = () => {
   return (
     <>
-      <Grid >
+      <Grid>
         <Router>
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Clube" element={<Clube />} />
-            <Route path="/Loja" element={<Loja />} />
-            <Route path="/Produtores" element={<Produtores />} />
-            <Route path="/Eventos" element={<Eventos />} />
-            <Route path="/Ofertas" element={<Ofertas />} />
+            <Route path="/clube" element={<Clube />} />
+            <Route path="/loja" element={<Loja />} />
+            <Route path="/produtores" element={<Produtores />} />
+            <Route path="/eventos" element={<Eventos />} />
+            <Route path="/ofertas" element={<Ofertas />} />
           </Routes>
-
-
-        <Form />
-        <Content />
+          <Form />
+          <Content />
         </Router>
-
       </Grid>
-
     </>
   );
-}
+};
 
-export default Layout
+export default Layout;

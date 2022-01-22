@@ -15,7 +15,7 @@ export const Container = styled.div`
 
 export const TitleForm = styled.div`
   padding: 2rem 0;
-  margin-left: 10rem;
+  padding-left: 6rem;
 
   width: 256px;
   height: 24px;
@@ -25,17 +25,14 @@ export const TitleForm = styled.div`
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-    align-items: right;
+  align-items: right;
 
 `;
 
-
 export const BoxForm = styled.div`
-    margin-left: 5rem;
+    padding-left: 6rem;
     display: flex;
     flex-direction: column;
-
-
 `;
 export const SubTitleForm = styled.div`
   padding: 2rem 0 1rem ;
@@ -59,7 +56,7 @@ export const CheckBox = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 1.25rem;
+  margin-top: 1.75rem;
 
   @media screen and (max-height: 600px) {
     height: 70%;
@@ -68,7 +65,7 @@ export const CheckBox = styled.div`
 
 `;
 export const TextCheckBox = styled.div`
-
+  margin-left: 2rem;
 `;
 
 export const NavLinks = styled(Link)`

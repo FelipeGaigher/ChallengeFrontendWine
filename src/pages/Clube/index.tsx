@@ -1,10 +1,12 @@
 import React from "react";
 import { Container } from './styles';
+import Header from "../../components/Header";
+
 
 const Clube = () => {
   return (
     <Container>
-      <h1>Clube</h1>
+      <Header />
     </Container>
   );
 };

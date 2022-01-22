@@ -1,11 +1,14 @@
 import React from "react";
-import { Container } from './styles';
+import Header from "../../components/Header";
+import Form from "../../components/Form";
+// import Content from "../../components/Content";
+import Content from "../../components/Content";
 
 const Loja = () => {
   return (
-    <Container>
+    <div>
       <h1>Loja</h1>
-    </Container>
+    </div>
   );
 };
 
