@@ -11,7 +11,7 @@ const Button = () => {
 
   return (
     <>
-      <ButtonAdd onClick={handleAdd}>Adiciona{counter}</ButtonAdd>
+      <ButtonAdd onClick={handleAdd}>ADICIONAR{counter}</ButtonAdd>
     </>
   );
 };

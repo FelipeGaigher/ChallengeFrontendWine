@@ -12,7 +12,6 @@ import {
   NavIcons,
   NavItem,
   NavLinks,
-  // NavStart,
   NavMiddle,
   NavEnd,
   MobileIcon,
@@ -26,11 +25,9 @@ const Navbar = () => {
   return (
     <>
       <Container>
-        {/* <NavStart> */}
-          <NavLogo to="/">
-            <img src={Logo} alt="Wine" />
-          </NavLogo>
-        {/* </NavStart> */}
+        <NavLogo to="/">
+          <img src={Logo} alt="Wine" />
+        </NavLogo>
 
         <MobileIcon onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}

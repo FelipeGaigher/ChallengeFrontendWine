@@ -3,19 +3,16 @@ import { useState, useEffect } from "react";
 import { ListItem } from "../../types/ListItem";
 import Cards from "../../components/Card";
 
-import {
-  Container,
-  ItemFilter,
-} from "./styles";
+import { Container, ItemFilter } from "./styles";
 
 const Content = () => {
-  const [posts, setPosts] = useState<ListItem[]>([]);
+  const [list, setList] = useState<ListItem[]>([]);
 
   useEffect(() => {
     setTimeout(() => {
       fetch("https://wine-back-test.herokuapp.com/products?page=1&limit=10")
         .then((response) => response.json())
-        .then((response) => setPosts(response));
+        .then((response) => setList(response));
     }, 3000);
   });
 
@@ -25,20 +22,25 @@ const Content = () => {
         <ItemFilter>
           <p>49 produtos encontrados</p>
         </ItemFilter>
-          <Cards />
+        <Cards
+          title=''
+          // discount={70}
+          // percentage={60/100}
+          price={500}
+        />
 
         <div className="App">
-          {posts.length > 0 &&
-            posts.map((post) => {
+          {list.length > 0 &&
+            list.map((list) => {
               return (
-                <div key={post.id} className="post">
-                  <h1>{post.title}</h1>
-                  <p>{post.body}</p>
+                <div key={list.id} className="list">
+                  <h1>{list.title}</h1>
+                  <p>{list.body}</p>
                 </div>
               );
             })}
 
-          {posts.length >= 0 && <p>Ainda nao existem posts</p>}
+          {list.length >= 0 && <p>Ainda nao existem posts</p>}
         </div>
       </Container>
     </>

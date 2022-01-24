@@ -35,10 +35,7 @@ export const MobileIcon = styled.div`
 `;
 
 //LOGO
-// export const NavStart = styled.div`
-//   display: flex;
-//   margin-left: 3rem;
-// `;
+
 export const NavLogo = styled(Link)`
   display: flex;
   margin-left: 3rem;

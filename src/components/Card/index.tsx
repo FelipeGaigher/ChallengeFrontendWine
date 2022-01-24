@@ -1,6 +1,6 @@
 import React from "react";
 import imgVinho from "../../images/imgVinho/IMG Produto.svg";
-import Button from "../../components/ButtonAdd";
+import Button from "../../components/Button";
 
 import {
   Container,
@@ -21,12 +21,21 @@ import {
   Bars,
 } from "./styles";
 
+interface Props {
+  title: string;
+  discount?: number;
+  percentage?: number;
+  price: number;
+}
 
-const Cards = () => {
+const Cards: React.FC<Props> = ({title, discount, percentage, price}) => {
   return (
+    
     <Container>
+
       <CardsBox>
-        <Card>
+        <Card >
+
           <NavLinks to="/card1">
             <ItemProduct>
               <img src={imgVinho} alt="" />
@@ -35,19 +44,19 @@ const Cards = () => {
 
           <NavLinks to="/card1">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 1"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=48},00 </PriceGroup>
+            <DiscountGroup>{percentage=90}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(30*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -70,19 +79,19 @@ const Cards = () => {
 
           <NavLinks to="/card2">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 2"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=59},00 </PriceGroup>
+            <DiscountGroup>{percentage=50}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(40*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -105,19 +114,19 @@ const Cards = () => {
 
           <NavLinks to="/card3">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 3"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=99},00 </PriceGroup>
+            <DiscountGroup>{percentage=20}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(60*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -142,19 +151,19 @@ const Cards = () => {
 
           <NavLinks to="/card4">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 4"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=29},00 </PriceGroup>
+            <DiscountGroup>{percentage=30}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(20*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -177,19 +186,19 @@ const Cards = () => {
 
           <NavLinks to="/card5">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 5"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=39},00 </PriceGroup>
+            <DiscountGroup>{percentage=60}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(30*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -212,19 +221,19 @@ const Cards = () => {
 
           <NavLinks to="/card6">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 6"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=89},00 </PriceGroup>
+            <DiscountGroup>{percentage=70}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(50*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -249,19 +258,19 @@ const Cards = () => {
 
           <NavLinks to="/card7">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 7"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=49},00 </PriceGroup>
+            <DiscountGroup>{percentage=30}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(70*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -284,19 +293,19 @@ const Cards = () => {
 
           <NavLinks to="/card8">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 8"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=19},00 </PriceGroup>
+            <DiscountGroup>{percentage=70}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(20*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
@@ -319,19 +328,19 @@ const Cards = () => {
 
           <NavLinks to="/card9">
             <TextBox>
-              Bacalhoa Meia Pipa Private Selection Castelão Syrah 2014
+              {title="Nome vinho 9"} 
             </TextBox>
           </NavLinks>
 
           <GroupDiscount>
-            <PriceGroup>R$ 37,40</PriceGroup>
-            <DiscountGroup>60% OFF</DiscountGroup>
+            <PriceGroup>R${discount=89},00 </PriceGroup>
+            <DiscountGroup>{percentage=20}% OFF</DiscountGroup>
           </GroupDiscount>
 
           <GroupPartners>
             <TextPartners>Sócio Wine</TextPartners>
             <PricePartners>
-              R$ <FontSize>30,</FontSize>00
+              R$ <FontSize>{price=(80*1.8)}</FontSize>00
             </PricePartners>
           </GroupPartners>
 
