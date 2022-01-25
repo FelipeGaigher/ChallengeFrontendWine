@@ -6,12 +6,12 @@ const Button = () => {
   const [counter, setCounter] = useState(0);
 
   const handleAdd = () => {
-    setCounter((prevState) => prevState + 1);
+    setCounter(counter + 1);
   };
 
   return (
     <>
-      <ButtonAdd onClick={handleAdd}>ADICIONAR{counter}</ButtonAdd>
+      <ButtonAdd onClick={handleAdd}>ADICIONAR {counter}</ButtonAdd>
     </>
   );
 };
