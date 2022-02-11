@@ -1,10 +1,11 @@
 import React from "react";
 import { Container } from './styles';
+import Header from "../../components/Header";
 
 const Produtores = () => {
   return (
     <Container>
-      <h1>Produtores</h1>
+      <Header />
     </Container>
   );
 };

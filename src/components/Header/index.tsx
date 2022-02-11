@@ -71,21 +71,15 @@ const Navbar = () => {
 
         <NavEnd>
           <NavIcons>
-            <NavLinks to="/Search">
               <img src={Search} alt="Search" />
-            </NavLinks>
           </NavIcons>
 
           <NavIcons>
-            <NavLinks to="/Profile">
               <img src={Profile} alt="Profile" />
-            </NavLinks>
           </NavIcons>
 
           <NavIcons>
-            <NavLinks to="/WineBox">
               <img src={WineBox} alt="Winebox" />
-            </NavLinks>
           </NavIcons>
         </NavEnd>
       </Container>
